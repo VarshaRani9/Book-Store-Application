@@ -31,6 +31,14 @@ public class Book {
         this.price = price;
         this.publishedDate = publishedDate;
     }
+    
+    public Book(long id, String title, String author, BigDecimal price, LocalDate publishedDate) {
+        this.id=id;
+    	this.title = title;
+        this.author = author;
+        this.price = price;
+        this.publishedDate = publishedDate;
+    }
 
     // Getters and Setters
     public Long getId() {

@@ -54,7 +54,7 @@ public class BookController {
 	}
 	
 	@DeleteMapping("/books/{id}")
-	public ResponseEntity<Void> deleteBook(@PathVariable("id") int bookId) {
+	public ResponseEntity<Void> deleteBook(@PathVariable("id") long bookId) {
 		try {
 			this.bookService.deleteBook(bookId);
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
@@ -65,7 +65,7 @@ public class BookController {
 	}
 	
 	@PutMapping("/books/{id}")
-	public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable("id") int bookId) {
+	public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable("id") long bookId) {
 		try{
 			this.bookService.updateBook(book, bookId);
 			return ResponseEntity.ok().body(book);

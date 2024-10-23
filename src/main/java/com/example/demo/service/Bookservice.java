@@ -30,12 +30,12 @@ public class Bookservice {
 		return book;
 	}
 
-	public void deleteBook(long bid) {
-		bookRepo.deleteById(bid);
+	public void deleteBook(long id) {
+		bookRepo.deleteById(id);
 	}
 
-	public void updateBook(Book book, long bookId) {
-		book.setId(bookId);
+	public void updateBook(Book book, long id) {
+		book.setId(id);
 		bookRepo.save(book);
 	}
 
